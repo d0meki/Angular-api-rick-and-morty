@@ -1,0 +1,22 @@
+<h1>Listdo de Personajes de Rick and Morty</h1>
+<mat-divider></mat-divider>
+<br />
+
+
+
+<div fxLayout="row wrap"
+fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="20px"
+>
+    <div fxFlex="20" fxFlex.lg="15" fxFlex.sm="30" *ngFor="let heroe of heroes" >
+        <mat-card>
+            <mat-card-header>
+              <mat-card-title>{{ heroe.name }}</mat-card-title>
+              <mat-card-subtitle>{{ heroe.species }}</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image src="{{ heroe.image }}" alt="" />
+          </mat-card>
+    </div>
+  
+</div>
